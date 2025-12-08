@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime RPG Character Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Anime RPG Character Generator</h1>
+    <p>Buat karakter RPG kamu sendiri, bisa pilih manual atau random seluruh aspek.</p>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select id="role">
+        <option value="" disabled selected>Pilih Role</option>
+        <option value="Mage">Mage</option>
+        <option value="Warrior">Warrior</option>
+        <option value="Assassin">Assassin</option>
+        <option value="Healer">Healer</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="zodiac">Zodiac</label>
+      <select id="zodiac">
+        <option value="" disabled selected>Pilih Zodiac</option>
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="archetype">Archetype</label>
+      <select id="archetype">
+        <option value="" disabled selected>Pilih Archetype</option>
+        <option value="Shonen Hero">Shonen Hero</option>
+        <option value="Anti-Hero">Anti-Hero</option>
+        <option value="Comic Relief">Comic Relief</option>
+        <option value="Mentor">Mentor</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button onclick="showCharacter()">Tampilkan Karakter</button>
+      <button onclick="randomize()">Random</button>
+      <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <div id="result" class="card"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+      </html>
