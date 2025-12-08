@@ -1,0 +1,33 @@
+body {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #a64ca6;
+  text-shadow: 0 0 10px #a64ca6;
+}
+
+button {
+  background: linear-gradient(90deg, #a64ca6, #4c4ca6);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #a64ca6;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 15px #4c4ca6;
+}
