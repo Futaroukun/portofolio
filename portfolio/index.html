@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime RPG Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 32px; }
+    .form-group { margin-bottom: 15px; }
+    label { display: inline-block; width: 100px; }
+    select, button { padding: 6px; }
+    .card { border: 1px solid #aaa; padding: 18px; border-radius: 8px; max-width: 320px; margin-top: 18px; }
+    .actions { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>RPG Character Generator</h1>
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select id="role">
+      <option value="Mage">Mage</option>
+      <option value="Warrior">Warrior</option>
+      <option value="Assassin">Assassin</option>
+      <option value="Healer">Healer</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="zodiac">Zodiac</label>
+    <select id="zodiac">
+      <option value="Aries">Aries</option>
+      <option value="Taurus">Taurus</option>
+      <option value="Gemini">Gemini</option>
+      <option value="Cancer">Cancer</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="archetype">Archetype</label>
+    <select id="archetype">
+      <option value="Shonen Hero">Shonen Hero</option>
+      <option value="Anti-Hero">Anti-Hero</option>
+      <option value="Comic Relief">Comic Relief</option>
+      <option value="Mentor">Mentor</option>
+    </select>
+  </div>
+  <div class="actions">
+    <button onclick="showCharacter()">Tampilkan Karakter</button>
+    <button onclick="randomize()">Random</button>
+  </div>
+  <div id="result" class="card"></div>
+
+  <script>
+    const roles = ["Mage", "Warrior", "Assassin", "Healer"];
+    const zodiac = ["Aries", "Taurus", "Gemini", "Cancer"];
+    const archetypes = ["Shonen Hero", "Anti-Hero", "Comic Relief", "Mentor"];
+
+    function showCharacter() {
+      const role = document.getElementById("role").value;
+      const sign = document.getElementById("zodiac").value;
+      const archetype = document.getElementById("archetype").value;
+      document.getElementById("result").innerHTML =
+        `<h2>${role}</h2><p>Zodiac: ${sign}</p><p>Archetype: ${archetype}</p>`;
+    }
+
+    function randomize() {
+      document.getElementById("role").value = roles[Math.floor(Math.random() * roles.length)];
+      document.getElementById("zodiac").value = zodiac[Math.floor(Math.random() * zodiac.length)];
+      document.getElementById("archetype").value = archetypes[Math.floor(Math.random() * archetypes.length)];
+      showCharacter();
+    }
+  </script>
+</body>
+</html>
