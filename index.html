@@ -1,29 +1,28 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Doe - Full Stack Developer Portfolio</title>
-    <meta name="description" content="Full Stack Developer portfolio showcasing modern web applications, UI/UX design, and creative digital solutions." />
-    <meta name="author" content="John Doe" />
-    <meta name="keywords" content="portfolio, web developer, full stack, react, typescript, frontend, backend" />
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime RPG Generator</title>
+  <style>
+    body { font-family: Arial; background: #222; color: #eee; text-align: center; }
+    .card { background: #333; padding: 20px; margin: 20px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>RPG Character Generator</h1>
+  <button onclick="generate()">Generate!</button>
+  <div id="result" class="card"></div>
 
-    <meta property="og:title" content="John Doe - Full Stack Developer" />
-    <meta property="og:description" content="Full Stack Developer portfolio showcasing modern web applications and creative digital solutions." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="John Doe - Full Stack Developer" />
-    <meta name="twitter:description" content="Full Stack Developer portfolio showcasing modern web applications." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <link rel="canonical" href="https://johndoe.dev" />
-  </head>
-
-  <body class="dark">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>
+    function generate() {
+      const roles = ["Mage", "Warrior", "Assassin", "Healer"];
+      const zodiac = ["Aries", "Taurus", "Gemini", "Cancer"];
+      const archetypes = ["Shonen Hero", "Anti-Hero", "Comic Relief", "Mentor"];
+      const role = roles[Math.floor(Math.random()*roles.length)];
+      const sign = zodiac[Math.floor(Math.random()*zodiac.length)];
+      const archetype = archetypes[Math.floor(Math.random()*archetypes.length)];
+      document.getElementById("result").innerHTML =
+        `<h2>${role}</h2><p>Zodiac: ${sign}</p><p>Archetype: ${archetype}</p>`;
+    }
+  </script>
+</body>
 </html>
-  
