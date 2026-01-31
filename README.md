@@ -114,7 +114,12 @@ export default handler;
 
 ## Plugin System
 
-Joy Bot menggunakan sistem plugin modular. Semua plugin berada di folder [plugins](./plugins) dan akan otomatis terdeteksi. Jika Anda memiliki pertanyaan atau mengalami masalah atau bug, silakan kunjungi halaman [issue](https://github.com/Futaroukun/Joy/issues).
+Joy dirancang dengan arsitektur *Plug-and-Play* yang sangat efisien. Setiap perintah (command) bersifat modular, artinya lu bisa menambah atau menghapus fitur tanpa mengganggu stabilitas sistem inti.
+
+*Kelebihan sistem plugin Joy:*
+- *Hot-Reloading:* Lu cuma perlu edit atau tambah file `.js` di folder `plugins/`, pencet Save, dan Joy bakal otomatis nge-load fiturnya *tanpa perlu restart bot*.
+- *ESM Native:* Menggunakan standar modul terbaru (ESM) untuk performa yang lebih enteng.
+- *Easy Maintenance:* Kode lebih rapi dan gampang dicari kalau ada error.
 
 ---
 
