@@ -10,7 +10,9 @@
   <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Type-ESM-00d4ff?style=for-the-badge" alt="Type"></a>
 </p>
 
-Joy adalah bot WhatsApp modern yang powerful dan memory leak-proof. Bot ini dibuat menggunakan **Node.js ESM** dan gratis untuk dimodifikasi dan didistribusikan dengan biaya **$0**.
+<p align="center">
+  <strong>Joy</strong> adalah bot WhatsApp berarsitektur modern yang dirancang untuk performa tinggi dan efisiensi sumber daya. Dibangun sepenuhnya menggunakan <strong>Node.js ESM</strong>, bot ini menawarkan struktur modular yang mudah dipahami, dimodifikasi, dan didistribusikan secara <strong>Gratis ($0)</strong>.
+</p>
 
 ---
 
@@ -40,12 +42,12 @@ git clone https://github.com/Futaroukun/Joy
 Edit file `settings.js` di bagian `global.info`. Kemudian ubah nomor owner dan bot.
 
 ```javascript
-global.owner = ["6283854551575"]
+global.owner = ["628xxxxx"]
 
 global.info = {
-    nomorbot: "6285722157719",
+    nomorbot: "628xxxxx",
     namabot: "Joy",
-    nomorowner: "6283854551575", 
+    nomorowner: "628xxxxx", 
     namaowner: "Rafli"
 }
 ```
@@ -66,26 +68,46 @@ npm start
 node main.js
 ```
 
+### 5. Masukkan nomor
+Masukkan nomor telpon yang akan dijadikan bot di terminal anda lalu enter
+
+### 6. Masukkan kode
+Masukan kode yang muncul di terminal ke fitur tautkan perangkat di WhatsApp, caranya begini:
+
+```
+1. Klik titik 3 di pojok kanan atas di WhatsApp anda
+2. Lalu pilih perangkat tertaut atau tautkan perangkat
+3. Klik tombol tautkan perangkat yang berada dibawah
+4. Jika muncul popup pilih "Gunakan data seluler"
+5. Disini kalian diminta untuk scan (abaikan saja itu) pilih saja "Tautkan dengan nomor telepon saja"
+6. Masukan kode yang muncul di terminal tadi lalu tunggu 
+```
+
 Selesai! Bot Anda siap digunakan!
 
 ---
 
-## Adding a command
-
-Joy Bot adalah skrip berbasis plugin. Semua perintah tersedia dan akan otomatis terdeteksi di folder [plugins](./plugins). Untuk memulai, Anda perlu membuat perintah seperti ini:
+## Creating a Plugins
+Joy dibangun dengan sistem modular yang fleksibel. Anda hanya perlu membuat file .js baru di folder plugins, dan perintah tersebut akan langsung aktif. Berikut adalah contoh struktur plugin standar (ping/speed):
 
 ```javascript
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-    // You can use Regex for example /^hello$/i.test(command)
-    m.reply("Hello World!");
+import { performance } from 'perf_hooks';
+
+let handler = async (m, { conn }) => {
+    let start = performance.now();
+    await m.reply('Testing speed...');
+    let end = performance.now();
+    
+    let speed = (end - start).toFixed(2);
+    m.reply(`🚀 Latency: ${speed}ms`);
 }
 
-handler.help = ['hello']
-handler.tags = ['main']
-handler.command = /^(hello|hai)$/i
+handler.help = ['ping'];
+handler.tags = ['info'];
+handler.command = /^(ping|speed)$/i;
 
-// Export It
 export default handler;
+
 ```
 
 ---
