@@ -5,9 +5,9 @@
 <h1 align="center">Joy Bot</h1>
 
 <p align="center">
-  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Node.js-v20+-339933?logo=node.js" alt="Node.js"></a>
-  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Baileys-Latest-25D366?logo=whatsapp" alt="Baileys"></a>
-  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Type-ESM-00d4ff" alt="Type"></a>
+  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Node.js-v20+-339933?logo=node.js&style=for-the-badge" alt="Node.js"></a>
+  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Baileys-Latest-25D366?logo=whatsapp&style=for-the-badge" alt="Baileys"></a>
+  <a href="https://github.com/Futaroukun/Joy"><img src="https://img.shields.io/badge/Type-ESM-00d4ff?style=for-the-badge" alt="Type"></a>
 </p>
 
 Joy adalah bot WhatsApp modern yang powerful dan memory leak-proof. Bot ini dibuat menggunakan **Node.js ESM** dan gratis untuk dimodifikasi dan didistribusikan dengan biaya **$0**.
