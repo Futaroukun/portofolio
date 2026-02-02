@@ -19,10 +19,10 @@
 ## Features
 
 - [x] Pairing Code
-- [x] NodeJs ESM Sytem
+- [x] NodeJs ESM System
 - [x] Simpel Menu
 - [x] Auto Reconnect
-- [x] Plugins Sytem
+- [x] Plugins System 
 
 > [!NOTE]
 > Bot ini menggunakan ECMAScript Modules (ESM), bukan CommonJS. Pastikan menggunakan `import/export` bukan `require()`.
